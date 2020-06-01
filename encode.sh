@@ -29,7 +29,7 @@ file_check() {
 }
 
 start_encode(){
-  HandBrakeCLI -i "$input_dir"/"$file" -o "$output_dir"/"$short_file".mp4 -m -4 -E fdk_aac -B 320 -e x264 -q 20 -x level=4.1:ref=4:b-adapt=2:direct=auto:deblock=-1,-1:me=umh:subme=8:psy-rd=1.00,0.15:vbv-bufsize=78125:vbv-maxrate=62500:rc-lookahead=50  -s 1 --subtitle-forced --subtitle-burn --native-language eng >> "$log_dir"/handbrake.log 2>&1
+  HandBrakeCLI -i "$input_dir"/"$file" -o "$output_dir"/"$short_file".mp4 -m 4 -E fdk_aac -B 320 -e x264 -q 20 -x level=4.1:ref=4:b-adapt=2:direct=auto:deblock=-1,-1:me=umh:subme=8:psy-rd=1.00,0.15:vbv-bufsize=78125:vbv-maxrate=62500:rc-lookahead=50  -s 1 --subtitle-forced --subtitle-burn --native-language eng >> "$log_dir"/handbrake.log 2>&1
 }
 
 process_check(){
